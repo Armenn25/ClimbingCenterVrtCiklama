@@ -31,7 +31,6 @@ img{
 
 /* HEADER & NAV */
 .lang{
-    width: 50%;
     z-index: 1001;
     position: absolute;
     top: 2.4rem;
@@ -659,6 +658,7 @@ img{
 /* responsive */
 @media screen and (min-width: 340px){
     .lang{
+        width: 50%;
         top: 2.3rem;
         left: 1rem;
     }
@@ -798,6 +798,7 @@ img{
 }
 @media screen and (min-width: 1024px){
     .lang{
+        width: 10%;
         top: 2.3rem;
         right: 1rem;
         left: auto;
