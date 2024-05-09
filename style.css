@@ -31,6 +31,7 @@ img{
 
 /* HEADER & NAV */
 .lang{
+    z-index: -1;
     position: absolute;
     top: 2.4rem;
     right: 1rem;
@@ -334,28 +335,15 @@ img{
     justify-content: center;
     position: relative;
 }
-.waves{
-    position: absolute;
-    width: 100%;
-    height: 40%;
-    display: flex;
-    flex-direction: column;
-    z-index:  -1;
-}
 
-.waves img{
-    width: 100%;
-    height: 400px;
-    z-index:  -1;
-}
-
-video{
+.vid{
     position: absolute;
     right: 0;
     top: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    
 }
 .about_us_container{
     z-index: 10;
@@ -702,6 +690,7 @@ video{
         margin: 0;
     }
     .nav{
+        z-index: 1001;
         margin: 0 1.5rem;
     }
     .left{
