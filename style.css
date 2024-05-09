@@ -31,7 +31,8 @@ img{
 
 /* HEADER & NAV */
 .lang{
-    z-index: -1;
+    width: 50%;
+    z-index: 1001;
     position: absolute;
     top: 2.4rem;
     right: 1rem;
@@ -40,6 +41,7 @@ img{
 .choice{
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: .5rem;
 }
 .choice span{
@@ -97,7 +99,7 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    z-index: -1;
 }
 .logo,
 .nav__toggle{
@@ -660,6 +662,9 @@ img{
         top: 2.3rem;
         left: 1rem;
     }
+    .choice{
+        justify-content: flex-start;
+    }
     .title_top_color{
         color: #FFD700;
     }
@@ -796,6 +801,9 @@ img{
         top: 2.3rem;
         right: 1rem;
         left: auto;
+    }
+    .choice{
+        justify-content: flex-end;
     }
     .container{
         margin: 0 1.5rem;
