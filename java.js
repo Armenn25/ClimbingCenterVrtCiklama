@@ -58,6 +58,7 @@ var mySwiper = new Swiper('.mySwiper', {
     },
 });
 
+document.querySelector('.vid').play()
 //swipergallery
 var swiper = new Swiper(".gallery_swiper", {
     loop: true,
