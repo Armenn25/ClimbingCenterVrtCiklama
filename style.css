@@ -36,17 +36,25 @@ img{
     top: 2.4rem;
     right: 1rem;
 }
+
 .choice{
     display: flex;
     align-items: center;
     gap: .5rem;
 }
 .choice span{
-    color: #ffffff;
-    font-size: 18px;
-    cursor: pointer;
-    font-weight: bolder;
     z-index: 1001;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: .4s;
+}
+.choice span:hover{
+    background-color: #004409;
+}
+.active_flag{
+    background-color: #004409;
 }
 .left_back {
     background: #00d200;
@@ -64,40 +72,16 @@ img{
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
 }
-.lang_line {
-    height: 30px;
+.bih{
     width: 50px;
-    background-color: #ffffff;
-    transition: transform .5s ease;
-    z-index: -1;
-  }
-.lang_line.left_back {
-    transform: translateX(-100%);
-    animation: leftBack 0.5s forwards;
-  }
-  
-  .lang_line.right_back {
-    transform: translateX(100%);
-    animation: rightBack 0.5s forwards;
-  }
-  
-  @keyframes leftBack {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  
-  @keyframes rightBack {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
+}
+.eng{
+    width: 50px;
+}
+.bih img,.eng img{
+    width: 80%;
+    padding: 4px 0;
+}
 .header{
     width: 100%;
     background-color:rgb(0, 31, 0);
@@ -434,6 +418,9 @@ img{
 /* gallery */
 .gallery{
     padding-top: 2rem;
+    padding-bottom: 3rem;
+
+    background-color: rgb(0, 31, 0);
 }
 .gallery-slide{
     max-height: 450px;
@@ -444,7 +431,9 @@ img{
       justify-content: center;
       align-items: center;
 }
-
+.swiper-pagination-bullet-active{
+    background: #00d200!important
+}
 .gallery_wrapper{
     padding-top: 3rem;
     max-height: 380px;
@@ -487,6 +476,7 @@ img{
     padding: 0;
 }
 /* contact-us */
+
 .backdiv{
     display: flex;
     flex-direction: column;
@@ -667,7 +657,7 @@ img{
 /* responsive */
 @media screen and (min-width: 340px){
     .lang{
-        top: 2rem;
+        top: 2.3rem;
         left: 1rem;
     }
     .title_top_color{
@@ -803,7 +793,7 @@ img{
 }
 @media screen and (min-width: 1024px){
     .lang{
-        top: 2rem;
+        top: 2.3rem;
         right: 1rem;
         left: auto;
     }

@@ -4,10 +4,8 @@ const eng=document.querySelector('.eng')
 let linija=document.querySelector('.lang_line')
 bih.addEventListener('click',()=>{
   if(bih){
-    linija.classList.add('left_back')
-    linija.classList.add('bl')
-    linija.classList.remove('right_back')
-    linija.classList.remove('br')
+    bih.classList.add('active_flag')
+    eng.classList.remove('active_flag')
     document.querySelector('.home').innerHTML="POČETNA"
     document.querySelector('.about__us').innerHTML="O NAMA"
     document.querySelector('.gallery_l').innerHTML="GALERIJA"
@@ -36,10 +34,8 @@ bih.addEventListener('click',()=>{
 })
 eng.addEventListener('click',()=>{
   if(eng){
-    linija.classList.remove('left_back')
-    linija.classList.add('br')
-    linija.classList.add('right_back')
-    linija.classList.remove('bl')
+    bih.classList.remove('active_flag')
+    eng.classList.add('active_flag')
     document.querySelector('.home').innerHTML="HOME"
     document.querySelector('.about__us').innerHTML="ABOUT US"
     document.querySelector('.gallery_l').innerHTML="GALLERY"
