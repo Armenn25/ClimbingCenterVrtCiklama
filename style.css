@@ -348,7 +348,8 @@ img{
     height: 400px;
     z-index:  -1;
 }
-.about_us_video{
+
+video{
     position: absolute;
     right: 0;
     top: 0;
