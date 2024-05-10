@@ -23,10 +23,13 @@
 <body>
     <header class="header" id="header">
         <div class="lang">
-            <div class="choice">
-                <span class="bih font"><img src="images/Flag_of_Bosnia_and_Herzegovina.svg.jpg" alt=""></span>
-                <span class="eng font active_flag"><img src="images/Flag-United-States-of-America.jpg" alt=""></span>
-            </div>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Language</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a class="eng active_flag" href="#">English</a>
+                  <a class="bih" href="#">Bosnian</a>
+                </div>
+              </div>
         </div>
         <div class="nav container">    
             <div class="nav_menu" id="nav-menu">
@@ -65,7 +68,7 @@
                         </p>
                     </div>
                     <div class="btn_div">
-                        <a href="#" class="hero_btn btn font">Join Us</a>
+                        <a href="#contact-us" class="hero_btn btn font">Join Us</a>
                     </div>
                 </div>
                 <div class="right">
@@ -151,6 +154,18 @@
                             <div class="swiper-slide gallery-slide">
                                 <img class="slider-image" src="images/test.jpg" alt="">
                             </div>
+                            <div class="swiper-slide gallery-slide">
+                                <img class="slider-image" src="images/galerija20.png" alt="">
+                            </div>
+                            <div class="swiper-slide gallery-slide">
+                                <img class="slider-image" src="images/galerija21.png" alt="">
+                            </div>
+                            <div class="swiper-slide gallery-slide">
+                                <img class="slider-image" src="images/galerija22.png" alt="">
+                            </div>
+                            <div class="swiper-slide gallery-slide">
+                                <img class="slider-image" src="images/galerija23.png" alt="">
+                            </div>
                         </div>
                         <div class="swiper-pagination"></div>
 
@@ -162,8 +177,8 @@
         </div>
         <div class="contact_us section" id="contact-us">
             <div class="backdiv">
-                <img class="backimg" src="images/wave2.png" alt="">
-                <img class="backimg1" src="images/wave3.png" alt="">
+                <img class="backimg" src="images/swave.png" alt="">
+                <img class="backimg1" src="images/swave1.png" alt="">
             </div>
             <div class="contact-us_container container">
                 <div class="contact-us_header">
@@ -237,6 +252,7 @@
     
     <script src="java.js"></script>
     <script src="lang_java.js"></script>
+    <script src="sc_reveal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>

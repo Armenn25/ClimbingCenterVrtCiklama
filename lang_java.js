@@ -2,10 +2,34 @@
 const bih=document.querySelector('.bih')
 const eng=document.querySelector('.eng')
 let linija=document.querySelector('.lang_line')
+bih.addEventListener('mouseover', ()=>{
+if(bih.classList.contains('active_flag')){
+  bih.style.backgroundColor = '#8b8b8b';
+}
+})
+bih.addEventListener('mouseout', ()=>{
+  if(bih.classList.contains('active_flag')){
+    bih.style.backgroundColor = '';
+  }
+  })
+
+  eng.addEventListener('mouseover', ()=>{
+    if(eng.classList.contains('active_flag')){
+      eng.style.backgroundColor = '#8b8b8b';
+    }
+    })
+    eng.addEventListener('mouseout', ()=>{
+      if(eng.classList.contains('active_flag')){
+        eng.style.backgroundColor = '';
+      }
+      })
 bih.addEventListener('click',()=>{
   if(bih){
     bih.classList.add('active_flag')
     eng.classList.remove('active_flag')
+    document.querySelector('.dropbtn').innerHTML="Jezik "
+    document.querySelector('.bih').innerHTML="Bosanski"
+    document.querySelector('.eng').innerHTML="Engleski"
     document.querySelector('.home').innerHTML="POČETNA"
     document.querySelector('.about__us').innerHTML="O NAMA"
     document.querySelector('.gallery_l').innerHTML="GALERIJA"
@@ -30,12 +54,16 @@ bih.addEventListener('click',()=>{
     document.querySelector('.footer_title').innerHTML="PENJAČKI CENTAR VRT CIKLAMA"
     document.querySelector('.tt1').innerHTML="NAVIGACIJA"
     document.querySelector('.tt2').innerHTML="PROFILI"
+    document.querySelector('.copy').innerHTML="&#169; Autorsko pravo Armen Količić. Sva prava zadržana"
   }
 })
 eng.addEventListener('click',()=>{
   if(eng){
     bih.classList.remove('active_flag')
     eng.classList.add('active_flag')
+    document.querySelector('.dropbtn').innerHTML="Language"
+    document.querySelector('.bih').innerHTML="Bosnian"
+    document.querySelector('.eng').innerHTML="English"
     document.querySelector('.home').innerHTML="HOME"
     document.querySelector('.about__us').innerHTML="ABOUT US"
     document.querySelector('.gallery_l').innerHTML="GALLERY"
@@ -60,7 +88,6 @@ eng.addEventListener('click',()=>{
     document.querySelector('.footer_title').innerHTML="CLIMBING CENTER VRT CIKLAMA"
     document.querySelector('.tt1').innerHTML="NAVIGATION"
     document.querySelector('.tt2').innerHTML="SOCIAL"
-
-
+    document.querySelector('.copy').innerHTML="&#169; Copyright Armen Količić. All rights reserved"
   }
 })
