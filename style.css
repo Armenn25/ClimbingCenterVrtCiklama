@@ -214,6 +214,8 @@ img{
 .home{
     padding-bottom: 0;
     position: relative;
+    background-color: #fff;
+    z-index: 1;
   }
 .home_container{
     display: flex;
@@ -223,6 +225,8 @@ img{
     padding-top: 6rem;
     z-index: 10;
     gap: 1rem;
+    position: relative;
+    background-color: #ffffff;
 }
 .left{
     display: flex;
@@ -232,6 +236,7 @@ img{
     width:45%;
     gap: .5rem;
     padding-top: 2rem;
+    position: relative;
 }
 .left :nth-child(3){
     align-self: flex-end;
@@ -315,7 +320,7 @@ img{
 }
 
 .vid{
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     width: 100%;
@@ -416,14 +421,21 @@ img{
 
     background-color: rgb(0, 31, 0);
 }
+.gallery_panorama{
+    padding-bottom: 3rem;
+}
 .gallery-slide{
     max-height: 450px;
     text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+.gallery-slide:hover{
+    transform: scale(1.3);
 }
 .swiper-pagination-bullet-active{
     background: #00d200!important
@@ -477,13 +489,13 @@ img{
     position: absolute;
     width: 100%;
     bottom: 0;
-    z-index: -1;
+    z-index: 1;
 }
 .backimg{
-    z-index: -1;
+    z-index: 1;
 }
 .backimg1{
-    z-index: -1;
+    z-index: 1;
 }
 .contact-us_header{
     display: flex;
@@ -501,12 +513,16 @@ img{
 }
 .contact_us{
     min-height: 100vh;
+    position: relative;
+    background-color: #fff;
 }
 .contact-us_content{
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 4rem;
+    position: relative;
+    z-index: 1;
 }
 .forma{
     display: flex;
@@ -514,6 +530,7 @@ img{
     width: 50%;
     gap: 1rem;
 }
+
 .footer_input{
     padding: 1.2rem 1rem;
     border-radius: 10px;
@@ -582,6 +599,7 @@ img{
   /* footer */
   footer{
     background-color: #002405;
+    position: relative;
     padding: 1rem 0;
   }
   .footer_container{
@@ -641,6 +659,7 @@ img{
     font-size: 16px;
   }
   .footer_copy{
+    position: relative;
     border-top: 2px solid #cfcfcf;
     background-color: #002405;
     color: white;
@@ -962,3 +981,5 @@ img{
   .dropdown a:hover {background-color: #ddd;}
   
   .show {display: block;}
+
+  

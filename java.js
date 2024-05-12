@@ -67,8 +67,6 @@ var mySwiper = new Swiper('.mySwiper', {
       el: '.swiper-pagination',
       clickable: true,
     },
-    
-    
   
     // Automatsko prebacivanje
     autoplay: {
@@ -173,4 +171,14 @@ function validateForm() {
   }
   return isValid; // Ako je isValid false, sprečava slanje forme
 }
+
+var slides = document.querySelectorAll('.swiper-slide');
+        slides.forEach(function(slide) {
+          slide.addEventListener('mouseenter', function() {
+            slide.style.zIndex = '1001';
+          });
+          slide.addEventListener('mouseleave', function() {
+            slide.style.zIndex = '-1';
+          });
+});
 
