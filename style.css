@@ -419,8 +419,7 @@ img{
 /* gallery */
 .gallery{
     padding-top: 2rem;
-    padding-bottom: 3rem;
-
+    position: relative;
     background-color: rgb(0, 31, 0);
 }
 .gallery_panorama{
@@ -504,6 +503,7 @@ img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 .contact-us_title{
     font-family: "Courgette", cursive;
@@ -531,6 +531,7 @@ img{
     flex-direction: column;
     width: 50%;
     gap: 1rem;
+    position: relative;
 }
 
 .footer_input{
