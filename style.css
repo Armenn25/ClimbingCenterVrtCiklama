@@ -667,8 +667,9 @@ img{
     background-color: #002405;
     color: white;
     display: flex;
+    font-size: 17px;
     justify-content: center;
-    padding: .3rem 0;
+    padding: 1rem 0;
   }
 /* responsive */
 @media screen and (min-width: 340px){
