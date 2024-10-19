@@ -77,33 +77,75 @@ var mySwiper = new Swiper('.mySwiper', {
 
 document.querySelector('.vid').play()
 //swipergallery
-var swiper = new Swiper(".gallery_swiper", {
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 10,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    breakpoints: {
-      640: {
-        slidesPerView: 2,
+
+document.addEventListener("DOMContentLoaded", function() {
+  const images = [
+      "images/gallery1.jpg",
+      "images/gallery2.jpg",
+      "images/gallery3.jpg",
+      "images/gallery4.jpg",
+      "images/gallery5.jpg",
+      "images/gallery7.jpg",
+      "images/gallery10.jpg",
+      "images/back2.jpg",
+      "images/test.jpg",
+      "images/galerija20.png",
+      "images/galerija21.png",
+      "images/galerija22.png",
+      "images/galerija23.png"
+  ];
+
+  let gallery = document.querySelector('.gallery_wrapper');
+  for (let i = 0; i < images.length; i++) {
+      gallery.innerHTML += `<div class="swiper-slide gallery-slide">
+                              <img class="slider-image" src="${images[i]}" alt="">
+                            </div>`;
+  }
+
+  // Koristi `requestAnimationFrame` za forsiranje renderovanja
+  requestAnimationFrame(() => {
+      // Ovdje možeš inicijalizirati bilo koji plugin za galeriju, npr. Swiper
+      var swiper = new Swiper(".gallery_swiper", {
+        loop: true,
+        slidesPerView: 1,
         spaceBetween: 10,
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 10,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 10,
-      },
-    },
-  });
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+          },
+        },
+      });
+
+      
+      var slides = document.querySelectorAll('.swiper-slide');
+      slides.forEach(function(slide) {
+        slide.addEventListener('mouseenter', function() {
+          slide.style.zIndex = '1001';
+        });
+        slide.addEventListener('mouseleave', function() {
+          slide.style.zIndex = '-1';
+        });
+      });
+            console.log("Render complete, now initializing the gallery.");
+    });
+});
 
   /*===============EMAIL===============*/
 function sendMail(event){
@@ -171,14 +213,3 @@ function validateForm() {
   }
   return isValid; // Ako je isValid false, sprečava slanje forme
 }
-
-var slides = document.querySelectorAll('.swiper-slide');
-        slides.forEach(function(slide) {
-          slide.addEventListener('mouseenter', function() {
-            slide.style.zIndex = '1001';
-          });
-          slide.addEventListener('mouseleave', function() {
-            slide.style.zIndex = '-1';
-          });
-});
-
